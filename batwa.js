@@ -1,5 +1,7 @@
-var code = 'hvfkN/qlp/zhXR3cuerq6jd2Z7g'
-
+var code = 'HVFKNZHXR3CUERQ6JD2Z7G'
+function timeout() {
+    setTimeout(function(){ document.getElementById("code").value = ""; }, 5000);
+  }
 document.getElementById('Submit').onclick = function () {
     
     var codeval = document.getElementById("code").value
@@ -7,6 +9,13 @@ document.getElementById('Submit').onclick = function () {
         document.getElementById('updbal').textContent = "Wallet Balance = " +  '10000 Rs'
         document.getElementById("code").value = ""
     }
+    else {
+        document.getElementById("code").value = "Invalid code"
+    
+        //alert("Invalid code")
+        timeout();
+        
+}
 
 }
 
